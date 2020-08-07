@@ -1,7 +1,6 @@
-from django.shortcuts import render
-
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 def index(request):
-    return HttpResponse("You are looking at my homepage!")
+    return HttpResponseRedirect(reverse('polls:index'))
